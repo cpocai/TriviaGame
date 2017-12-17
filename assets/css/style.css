@@ -1,0 +1,25 @@
+body {
+  background-image:url('../images/green-0-1.jpeg');
+}
+.container{
+  margin-top: 50px;
+  text-align: center;
+}
+.col-4{
+  text-align: center;
+}
+.questionArea{
+  text-align: center;
+}
+.startbutton{
+  text-align: center;
+  margin-top: 50px;
+}
+.stopbutton{
+  text-align: center;
+  margin-top: 50px;
+}
+.result{
+  text-align: center;
+  padding: 50px;
+}
