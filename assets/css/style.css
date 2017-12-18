@@ -1,25 +1,25 @@
-body {
-  background-image:url('../images/green-0-1.jpeg');
+.container {
 }
-.container{
-  margin-top: 50px;
+.jumbotron{
+}
+.row {
+}
+.col-12 {
   text-align: center;
 }
-.col-4{
+.col-8 {
   text-align: center;
 }
-.questionArea{
+.col-4 {
   text-align: center;
+  font-size: 25px;
 }
-.startbutton{
-  text-align: center;
-  margin-top: 50px;
+.question{
+  padding: 10px;
 }
-.stopbutton{
-  text-align: center;
-  margin-top: 50px;
+.answer{
+  padding: 10px;
 }
-.result{
-  text-align: center;
-  padding: 50px;
+.submitanswer{
+  padding: 10px;
 }
