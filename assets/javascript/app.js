@@ -8,30 +8,30 @@ var IntervalId = 0;
 var win = 0;
 var lose = 0;
 var q1 = {
-  q: "What is q1?",
-  a1: "<input type='radio' name='gender1' id='Correct' value='Q1Male'>  Q1Male  ",
-  a2: "<input type='radio' name='gender1' id='Q1Female' value='Q1female'>  Q1Female  ",
-  a3: "<input type='radio' name='gender1' id='Q1Other' value='Q1other'>  Q1Other  "
+  q: "What is the command to create a file?",
+  a1: " <input type='radio' name='gender1' id='Correct'>  touch <filename>  ",
+  a2: " <input type='radio' name='gender1' id='Wrong1'>  create <filename>  ",
+  a3: " <input type='radio' name='gender1' id='Wrong2'>  cp <filename>  "
 };
 var q2 = {
-  q: "What is q2?",
-  a1: "<input type='radio' name='gender2' id='Q2Male' value='Q2male'>  Q2Male  ",
-  a2: "<input type='radio' name='gender2' id='Correct' value='Q2Female'>  Q2Female  ",
-  a3: "<input type='radio' name='gender2' id='Q2Other' value='Q2other'>  Q2Other  "
+  q: "What is a command to create a folder?",
+  a1: " <input type='radio' name='gender2' id='Wrong3'>  touch <filename>  ",
+  a2: " <input type='radio' name='gender2' id='Correct'>  mkdir <filename>  ",
+  a3: " <input type='radio' name='gender2' id='Wrong4'>  rm <filename>  "
 };
 var q3 = {
-  q: "What is q3?",
-  a1: "<input type='radio' name='gender3' id='Q3Male' value='Q3male'>  Q3Male  ",
-  a2: "<input type='radio' name='gender3' id='Q3female' value='Q3female'>  Q3Female  ",
-  a3: "<input type='radio' name='gender3' id='Correct' value='Q3Other'>  Q3Other  "
+  q: "What is the command to move a file?",
+  a1: " <input type='radio' name='gender3' id='Wrong5'>  cp <filename> <destination>  ",
+  a2: " <input type='radio' name='gender3' id='Wrong6'>  ls <filename> <destination>  ",
+  a3: " <input type='radio' name='gender3' id='Correct'>  mv <filename> <destination>  "
 };
 var q4 = {
-  q: "What is q4?",
-  a1: "<input type='radio' name='gender4' id='Correct' value='Q4Male'>  Q4Male  ",
-  a2: "<input type='radio' name='gender4' id='Q4female' value='Q4female'>  Q4Female  ",
-  a3: "<input type='radio' name='gender4' id='Q4Other' value='Q4other'>  Q4Other  "
+  q: "What is the command to go up one directory?",
+  a1: "<input type='radio' name='gender4' id='Correct'>  cd ..  ",
+  a2: "<input type='radio' name='gender4' id='Wrong7'>  pwd  ",
+  a3: "<input type='radio' name='gender4' id='Wrong8'>  ls -l  "
 };
-var questions = [q1,q2,q3,q4];
+var questions = [q1,q2,q3,q4,q4,q3,q2,q1];
 
 /////////////////--Function--/////////////////
 function start(){
@@ -53,7 +53,7 @@ function subtract(){
   $("#col-4").html(StartNumber);
 };
 function getRandom(){
-  var i = Math.floor((Math.random() * 4) + 0);
+  var i = Math.floor((Math.random() * 7) + 0);
   $("#col-12").html("<div class='question'>"+questions[i].q+"</div><div class='answer'>"+questions[i].a1+questions[i].a2+questions[i].a3+"</div><div class='submitanswer'>"+SubmitAnswer+"</div>");
   $("#SubmitAnswer").on("click", stop);
 };
